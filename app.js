@@ -1,15 +1,25 @@
-const express = require("express")
+import express from "express";
 const app = express();
+
+import path from "path";
 
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/public/frontpage/frontpage.html")
-})
+    res.sendFile(path.resolve("public/pages/login/login.html"));
+});
+
+app.get("/frontpage", (req, res) => {
+    res.sendFile(path.resolve("public/pages/frontpage/frontpage.html"));
+});
 
 
 
-const PORT = 8080;
-app.listen(8080, () => {
-console.log("Running on port 8080.")
+
+const PORT = 3000;
+app.listen(PORT, (error) => {
+    if (error) {
+        console.log(error);
+    }
+    console.log("Server running on port", PORT);
 });
