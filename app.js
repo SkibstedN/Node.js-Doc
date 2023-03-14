@@ -13,6 +13,10 @@ app.get("/frontpage", (req, res) => {
     res.sendFile(path.resolve("public/pages/frontpage/frontpage.html"));
 });
 
+app.get("/nodeinfo", (req, res) => {
+    res.sendFile(path.resolve("public/pages/nodeinfo/nodeinfo.html"));
+});
+
 
 
 

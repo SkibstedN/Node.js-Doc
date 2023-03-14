@@ -1,0 +1,38 @@
+body {
+    background-color: darkgray;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+     font-weight: bold;
+}
+
+#logo {
+    width: 3em;
+}
+
+main {
+    flex: 1;
+}
+
+main p {
+    padding: 1em;
+    background-color: bisque;
+    width: 800px;
+    border-width:1px;
+    border-style:solid;
+    border-color:black;
+    font-size: large;
+}
+
+.textbox {
+    margin: 1em;
+}
+  
+.label-over-input {
+    display: block;
+    margin-bottom: 5px;
+   }
