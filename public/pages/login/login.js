@@ -12,8 +12,17 @@ loginForm.addEventListener("submit", (event) => {
   const passwordInput = document.querySelector("#password");
   
   if (usernameInput.value === name && passwordInput.value === password) {
-    window.location.href = "/frontpage";
+    setTimeout(() => {
+      window.location.href = "/frontpage";
+    }, 2500)
   } else {
     alert("Incorrect username or password!");
   }
 });
+
+
+
+
+
+ 
+  
