@@ -1,9 +1,6 @@
-
-
-// Retrieve the form and attach a submit event listener
 const loginForm = document.querySelector("form");
 loginForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // prevent the form from submitting normally
+  event.preventDefault();
 
   const name = "noname";
   const password = "noname";
