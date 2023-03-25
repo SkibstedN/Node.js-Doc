@@ -5,12 +5,19 @@ import path from "path";
 
 app.use(express.static("public"));
 
+import templateEngine from "./util/templateEngine.js";
+
 app.get("/", (req, res) => {
     res.sendFile(path.resolve("public/pages/login/login.html"));
 });
 
+const frontpage = templateEngine.readPage("./public/pages/frontpage/frontpage.html");
+const frontpagePage = templateEngine.renderPage(frontpage, {
+    tabTitle: "Frontpage"
+});
+
 app.get("/frontpage", (req, res) => {
-    res.sendFile(path.resolve("public/pages/frontpage/frontpage.html"));
+    res.send(frontpagePage);
 });
 
 app.get("/nodeinfo", (req, res) => {

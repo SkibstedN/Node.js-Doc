@@ -11,7 +11,7 @@ loginForm.addEventListener("submit", (event) => {
   if (usernameInput.value === name && passwordInput.value === password) {
     setTimeout(() => {
       window.location.href = "/frontpage";
-    }, 2500)
+    }, 1800)
   } else {
     alert("Incorrect username or password!");
   }
