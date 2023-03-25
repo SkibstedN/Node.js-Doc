@@ -5,7 +5,7 @@ function renderPage(page, config={}) {
                     .replace("$TAB_TITLE", config.tabTitle || "Upper")
                     .replace("$CSS_LINK", config.cssLink || "");
     const footer = fs.readFileSync("./public/components/footer/footer.html").toString()
-                    .replace("$FOOTER_YEAR", `© ${new Date().getFullYear()}`);
+                    .replace("$FOOTER_YEAR", `© Nikolaj Skibsted ${new Date().getFullYear()}`);
 
     return navbar + page + footer;
 }

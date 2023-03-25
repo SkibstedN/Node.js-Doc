@@ -16,40 +16,91 @@ const frontpagePage = templateEngine.renderPage(frontpage, {
     tabTitle: "Frontpage"
 });
 
+const nodeinfo = templateEngine.readPage("./public/pages/nodeinfo/nodeinfo.html");
+const nodeinfoPage = templateEngine.renderPage(nodeinfo, {
+    tabTitle: "Nodeinfo"
+});
+
+const jstopics = templateEngine.readPage("./public/pages/jstopics/jstopics.html");
+const jstopicsPage = templateEngine.renderPage(jstopics, {
+    tabTitle: "Jstopics"
+});
+
+const npm = templateEngine.readPage("./public/pages/npm/npm.html");
+const npmPage = templateEngine.renderPage(npm, {
+    tabTitle: "NPM"
+});
+
+const about = templateEngine.readPage("./public/pages/about/about.html");
+const aboutPage = templateEngine.renderPage(about, {
+    tabTitle:  "About"
+});
+
+const apitext = templateEngine.readPage("./public/pages/apitext/apitext.html");
+const apiptextPage = templateEngine.renderPage(apitext, {
+    tabTitle: "API info"
+});
+
+const expresspage = templateEngine.readPage("./public/pages/express/express.html");
+const expresspagePage = templateEngine.renderPage(expresspage, {
+    tabTitle: "Express"
+});
+
+const git = templateEngine.readPage("./public/pages/git/git.html");
+const gitPage = templateEngine.renderPage(git, {
+    tabTitle: "Git"
+});
+
+const nodemon = templateEngine.readPage("./public/pages/nodemon/nodemon.html");
+const nodemonPage = templateEngine.renderPage(nodemon, {
+    tabTitle: "Nodemon"
+});
+
+const SSR = templateEngine.readPage("./public/pages/SSR/SSR.html");
+const SSRPage = templateEngine.renderPage(SSR, {
+    tabTitle: "SSR"
+});
+
+
+
 app.get("/frontpage", (req, res) => {
     res.send(frontpagePage);
 });
 
 app.get("/nodeinfo", (req, res) => {
-    res.sendFile(path.resolve("public/pages/nodeinfo/nodeinfo.html"));
+    res.send(nodeinfoPage);
 });
 
 app.get("/jstopics", (req, res) => {
-    res.sendFile(path.resolve("public/pages/jstopics/jstopics.html"));
+    res.send(jstopicsPage);
 });
 
 app.get("/npm", (req, res) => {
-    res.sendFile(path.resolve("public/pages/npm/npm.html"));
+    res.send(npmPage);
 });
 
 app.get("/about", (req, res) => {
-    res.sendFile(path.resolve("public/pages/about/about.html"));
+    res.send(aboutPage);
 });
 
 app.get("/apitext", (req, res) => {
-    res.sendFile(path.resolve("public/pages/apitext/apitext.html"))
-})
+    res.send(apiptextPage);
+});
 
 app.get("/express", (req, res) => {
-    res.sendFile(path.resolve("public/pages/express/express.html"));
+    res.send(expresspagePage);
 });
 
 app.get("/git", (req, res) => {
-    res.sendFile(path.resolve("public/pages/git/git.html"));
+    res.send(gitPage);
 });
 
 app.get("/nodemon", (req, res) => {
-    res.sendFile(path.resolve("public/pages/nodemon/nodemon.html"));
+    res.send(nodemonPage);
+});
+
+app.get("/SSR", (req, res) => {
+    res.send(SSRPage);
 });
 
 
