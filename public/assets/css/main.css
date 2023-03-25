@@ -10,6 +10,22 @@ header {
      font-weight: bold;
 }
 
+footer p {
+    font-size: 1.5em;
+}
+
+img {
+    width: 10em;
+}
+.navbar {
+    background-color: yellowgreen;
+    padding: 0.5em;
+}
+.navbar a {
+    
+    margin: 0.5em;
+}
+
 #logo {
     width: 3em;
 }
@@ -20,7 +36,7 @@ main {
 
 main p {
     padding: 1em;
-    background-color: gold;
+    background: linear-gradient(to bottom, rgb(107, 161, 84), white);
     width: 800px;
     border-width:1px;
     border-style:solid;

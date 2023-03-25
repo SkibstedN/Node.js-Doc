@@ -7,7 +7,10 @@ function renderPage(page, config={}) {
     const footer = fs.readFileSync("./public/components/footer/footer.html").toString()
                     .replace("$FOOTER_YEAR", `© Nikolaj Skibsted ${new Date().getFullYear()}`);
 
-    return navbar + page + footer;
+    const anchor = '<a href="https://github.com/SkibstedN/Node.js-Doc" target="_blank">Source code</a>';
+    const footerWithAnchor = footer.replace("$SOURCE_CODE_ANCHOR", anchor);
+
+    return navbar + page + footerWithAnchor;
 }
 
 function readPage(pagePath) {
