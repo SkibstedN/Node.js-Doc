@@ -1,36 +1,111 @@
 
         <div class="textbox">
-            <h1>Node.js info</h1>
-            <p><b>Node.js</b> is a powerful runtime environment that enables developers to
-                 build high-performance applications using JavaScript. It is based 
-                 on the V8 JavaScript engine and allows developers to use JavaScript 
-                 on both the front-end and back-end of their applications. 
-                 Node.js is known for its scalability and is often used for building 
-                 web applications, APIs, real-time applications, and command-line tools.<br><br>
-
-                 <!--Node.js is a powerful runtime environment that enables developers to build high-performance 
-                    applications using JavaScript. It is based on the V8 JavaScript engine and allows developers 
-                    to use JavaScript on both 
-                    the front-end and back-end of their applications. Node.js is known for its scalability and is 
-                    often used for building web applications, APIs, real-time applications, and command-line tools.-->
-        
-                <b>Why Node.js?</b><br>
-                Node.js uses asynchronous programming!<br>
-                <b></b>Here is how Node.js handles a file request:</b><br>
+            <h1>Node.js info.</h1>
+            <p>
+                <p><b>Node.js</b> is a powerful runtime environment that enables developers to build 
+                 high-performance applications using JavaScript. It is based on the V8 
+                 JavaScript engine and allows developers to use JavaScript on both the 
+                 front-end and back-end of their applications. Node.js is known for its 
+                 scalability and is often used for building web applications, APIs, real-time 
+                 applications, and command-line tools.<br></p>
+                
+                <p><b>Why Node.js?</b><br>
+                Node.js uses asynchronous programming!
+                Here is how Node.js handles a file request:<br>
                 1. Sends the task to the computer's file system.<br>
                 2. Ready to handle the next request.<br>
-                3. When the file system has opened and read the file, the server returns the content to the client.<br><br>
-                Node.js eliminates the waiting, and simply continues with the next request.<br>
-                Node.js runs single-threaded, non-blocking, asynchronous programming, which is very memory efficient.<br><br>
-        
-                One of the key benefits of Node.js is its ability to handle large numbers of concurrent connections with low overhead. 
-                This makes it well-suited for building real-time web applications, such as chat applications or online multiplayer games.<br><br>
+                3. When the file system has opened and read the file, <br>
+                the server returns the content to the client.<br></p>
                 
-                <b>What Can Node.js Do?</b><br>
+                <p>Node.js eliminates the waiting, and simply continues with the next request.
+                Node.js runs single-threaded, non-blocking, asynchronous programming, 
+                which is very memory efficient.<br></p>
+                
+                <p>One of the key benefits of Node.js is its ability to handle large numbers 
+                of concurrent connections with low overhead. This makes it well-suited for 
+                building real-time web applications, such as chat applications or online multiplayer games.<br>
+                </p>
+                <p><b>What Can Node.js Do?</b><br>
                 Node.js can generate dynamic page content.<br>
                 Node.js can create, open, read, write, delete, and close files on the server.<br>
                 Node.js can collect form data.<br>
-                Node.js can add, delete, modify data in your database.<br>
+                Node.js can add, delete, modify data in your database.<br></p>
+                
+                <p><b>How?</b><br>
+                To install Node.js, follow these steps:<br>
+                1.	Go to the Node.js website at https://nodejs.org/en/download/.<br>
+                2.	Download the version of Node.js that is appropriate for your operating system. 
+                Node.js supports a variety of platforms, including Windows, macOS, and Linux.<br>
+                3.	Run the installer and follow the instructions provided. The installation process 
+                will vary depending on your operating system.<br>
+                4.	Once the installation is complete, open a terminal or command prompt and type 
+                node -v 
+                to check the version of Node.js that was installed. If everything is working properly, 
+                you should see the version number printed to the screen.<br></p>
+                
+                <p>That's it! You now have Node.js installed on your system and can start using it to build 
+                web applications.</p>
+                
+                <p>In the context of our pensum we have been running Node.js in Visual Studio Code.
+                Starting a Node.js project in Visual Studio Code involves several steps, including creating 
+                a new project directory, initializing a new Node.js project, and configuring Visual Studio 
+                Code to work with the project. Here are the basic steps of a way to do it:<br>
+                Open a terminal window and navigate to the directory where you want to create your project.
+                Use the mkdir command to create a new directory for your project, for example:
+                <p class="cmd">$ mkdir my-node-project</p>
+                Initialize a new Node.js project: In the terminal window, navigate to the new project directory 
+                and use the npm init command to initialize a new Node.js project. 
+                <p class="cmd">$ cd my-node-project npm init</p>
+                
+                This command will create a package.json file, which is used to define the metadata of the project, 
+                including its name, version, description, dependencies, scripts, and other important information. 
+                The file is also used by npm to manage the project's dependencies and allow other developers to 
+                install and use the project.</p>
+                
+                <p>Use the npm install command to install any dependencies your project requires, for example:
+                    <p class="cmd"> $ npm install express</p>
+                </p>
+                
+                <p><b>Create a new file:</b> <br>In Visual Studio Code, create a new file in the project 
+                directory by selecting File > New File from the menu or using the keyboard shortcut Ctrl+N. <br>
+                Save the file with a .js extension, for example, app.js.<br>
+                In the new file, write Node.js code, for example:<br></p>
+                
+                <pre>
+                <code class="language-javascript">
+                const express = require('express');
+                const app = express();
+                
+                app.get('/', (req, res) => { 
+                            res.send('Hello, world!');
+                });
+                
+                app.listen(3000, () => { 
+                    console.log('Server started on port 3000'); 
+                });</code>
+                </pre>
+                
+                <p>This is a simple Node.js web server built using the Express.js framework that listens 
+                for HTTP requests on port 3000 and responds with the message "Hello, world!" when the 
+                root URL is accessed. Express will be explained in another document.<br><br>
+                
+                In the terminal window, use the node command to run your Node.js application. example:   
+                <p class="cmd">
+                 $ node app.js
+                </p>
+                
+                We have, however, installed the great nodemon tool to assist us in the development process 
+                so we will run the app with nodemon like this:
+                <p class="cmd">
+                $ nodemon.cmd app.js
+                </p>
+                
+                Nodemon will attempt to restart the app everytime a change in the sourcecode is made. <br>
+                Nodemon will be further explained in another document.<br><br>
+                
+                The Node.js application should now be running, and can be viewed it in a web browser 
+                by navigating to http://localhost:3000/ .
+                </p>
                 
             </p>
             </div>

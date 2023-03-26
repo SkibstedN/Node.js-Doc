@@ -53,7 +53,7 @@ main {
 
 .cmd {
     padding: 0.5em;
-    background-color: honeydew;
+    background-color: darkgrey;
    }
 
 footer p {
@@ -67,3 +67,5 @@ img {
   #logo {
     width: 3em;
 }
+
+
