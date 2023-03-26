@@ -7,9 +7,7 @@ app.use(express.static("public"));
 
 import templateEngine from "./util/templateEngine.js";
 
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve("public/pages/login/login.html"));
-});
+
 
 const frontpage = templateEngine.readPage("./public/pages/frontpage/frontpage.html");
 const frontpagePage = templateEngine.renderPage(frontpage, {
@@ -61,7 +59,14 @@ const SSRPage = templateEngine.renderPage(SSR, {
     tabTitle: "SSR"
 });
 
+const modules = templateEngine.readPage("./public/pages/modules/modules.html");
+const modulesPage = templateEngine.renderPage(modules, {
+    tabTitle: "Modules"
+});
 
+app.get("/", (req, res) => {
+    res.sendFile(path.resolve("public/pages/login/login.html"));
+});
 
 app.get("/frontpage", (req, res) => {
     res.send(frontpagePage);
@@ -101,6 +106,10 @@ app.get("/nodemon", (req, res) => {
 
 app.get("/SSR", (req, res) => {
     res.send(SSRPage);
+});
+
+app.get("/modules", (req, res) => {
+    res.send(modulesPage);
 });
 
 

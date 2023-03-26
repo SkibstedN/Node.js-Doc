@@ -1,0 +1,118 @@
+<div class="textbox">
+    <h1>Modules in JavaScript and Node.js</h1>
+    <p><b>JavaScript modules</b> and <b>Node.js modules</b> are two types of modular programming 
+        paradigms in JavaScript.<br><br>
+
+        <b>JavaScript modules</b> are a way to organize code into reusable pieces of code, 
+        making it easier to maintain and reuse. A module is essentially a JavaScript 
+        file containing variables, functions, or objects that can be imported and used 
+        in other parts of the code. JavaScript modules were introduced in ES6 and are 
+        supported in modern web browsers.<br></p>
+        
+    <p> <b>Node.js modules</b> are similar to JavaScript modules, but they are specifically 
+        designed for use in the Node.js environment. Node.js modules use the CommonJS 
+        module format, which allows for exporting and importing modules using the 
+        require function. Node.js modules can be installed and managed using the 
+        Node Package Manager (npm).<br></p>
+        
+    <p> The main difference between JavaScript modules and Node.js modules is the way 
+        they are loaded and executed. JavaScript modules are loaded asynchronously, 
+        meaning they are only loaded when they are needed, while Node.js modules are 
+        loaded synchronously at runtime. Additionally, JavaScript modules are loaded 
+        directly from the browser, while Node.js modules are typically loaded from the 
+        local file system or from an external package repository.</p><br>
+        
+    <b>JavaScript module example:</b>
+        <pre>
+            <code class="language-javascript">
+        // math.js
+        export function add(a, b) {
+          return a + b;
+        }
+        
+        export function subtract(a, b) {
+          return a - b;
+        }
+        
+        
+        // main.js
+        import { add, subtract } from './math.js';
+        
+        console.log(add(1, 2));
+        console.log(subtract(4, 3));
+            </code>
+        </pre>
+        
+    <p>In this example, math.js is a JavaScript module that exports two functions add 
+        and subtract. These functions can be imported and used in other parts of the code,
+         as shown in main.js.</p><br>
+        
+        
+    <b> Node.js module example: </b>
+        <pre>
+            <code class="language-javascript">
+        // math.js
+        exports.add = function(a, b) {
+          return a + b;
+        };
+        
+        exports.subtract = function(a, b) {
+          return a - b;
+        };
+        
+        // main.js
+        const math = require('./math.js');
+        
+        console.log(math.add(1, 2));
+        console.log(math.subtract(4, 3));
+            </code>
+        </pre>
+        
+    <p> In this example, math.js is a Node.js module that exports two functions add and subtract 
+        using the exports object. These functions can be imported and used in other parts of the 
+        code using the require function, as shown in main.js.</p>
+        
+    <p> Overall, both JavaScript and Node.js modules allow for more modular, maintainable, 
+        and reusable code in JavaScript. The choice of which type of module to use depends 
+        on the specific requirements and environment of the current project.</p>
+        
+    <p> <b>Require vs import/export.</b>
+        Require and import/export are two different ways of importing and exporting modules in JavaScript.
+        require is a built-in function in Node.js that is used to load modules. It takes a string argument 
+        that specifies the path to the module file and returns the module's exports object. </p>
+        
+    <p> On the other hand, import/export is a newer syntax introduced in ES6 that allows you to import and
+        export modules in JavaScript. import is used to load modules, and export is used to export values 
+        from a module.</p>
+        
+    <p> The main differences between require and import/export are:<br><br>
+        
+        require is a built-in function in Node.js, while import/export is a language feature introduced 
+        in ES6 that is supported in modern web browsers.<br><br>
+        
+        require is a synchronous operation that loads modules at runtime, while import/export is an 
+        asynchronous operation that loads modules at compile time.<br><br>
+        
+        require loads the entire module and returns its exports object, while import/export allows you to 
+        selectively import and export specific values from a module.</p>
+        
+    <p> <b>CommonJS</b> is a module specification for JavaScript that defines a standard way of organizing 
+        code into reusable modules. It was initially designed for use in server-side JavaScript environments, 
+        such as Node.js, but it can also be used in web browsers with the help of bundlers like Webpack and 
+        Browserify.<br><br>
+        
+        The CommonJS specification provides a set of rules for defining and requiring modules. A module in 
+        CommonJS is a self-contained unit of code that can be used in other modules or scripts. Each module 
+        has its own scope, so variables and functions defined in one module are not accessible from other
+        modules unless explicitly exported.<br><br>
+        
+        CommonJS modules are typically organized as individual files, with each file containing a single 
+        module. Modules can be imported and exported using the require and module.exports statements, 
+        respectively. The require statement is used to load a module, and the module.exports statement is 
+        used to define what the module exports to other modules that require it.<br><br>
+        
+        Overall, CommonJS provides a way to write modular and reusable code in JavaScript, making it easier 
+        to manage large codebases and collaborate on projects with multiple developers.
+        </p>
+
+</div>
