@@ -1,22 +1,36 @@
 <div class="textbox"><h1>Express</h1>
-        <p>Express is a popular and lightweight web application framework for Node.js. It provides a set of features for building web applications and APIs, including handling HTTP requests and responses, routing, middleware support, and template rendering.</p>
+        <p>Express is a popular and lightweight web application framework for Node.js. It provides a set of 
+            features for building web applications and APIs, including handling HTTP requests and responses, 
+            routing, middleware support, and template rendering.</p>
         <p>Some of the key features of Express include:</p>
         <ul>
-            <li>Routing: Express provides a simple and intuitive API for defining routes, allowing you to map incoming HTTP requests to the appropriate handler function.</li>
-            <li>Middleware: Express supports middleware, which are functions that can be executed before or after the route handler function to perform tasks such as authentication, logging, and error handling.</li>
-            <li>Template rendering: Express supports several template engines, including EJS, Pug, and Handlebars, allowing you to generate dynamic HTML content in response to HTTP requests.</li>
-            <li>Error handling: Express provides a built-in error handling mechanism that allows you to handle errors that occur during the execution of your application.</li>
-            <li>Support for third-party modules: Express has a large and active community of developers who have created a wide range of third-party modules and plugins that can be easily integrated into your application.</li>
+            <li>Routing: Express provides a simple and intuitive API for defining routes, allowing you to map 
+                incoming HTTP requests to the appropriate handler function.</li>
+            <li>Middleware: Express supports middleware, which are functions that can be executed before or 
+                after the route handler function to perform tasks such as authentication, logging, and error 
+                handling.</li>
+            <li>Template rendering: Express supports several template engines, including EJS, Pug, and Handlebars, 
+                allowing you to generate dynamic HTML content in response to HTTP requests.</li>
+            <li>Error handling: Express provides a built-in error handling mechanism that allows you to handle 
+                errors that occur during the execution of your application.</li>
+            <li>Support for third-party modules: Express has a large and active community of developers who have 
+                created a wide range of third-party modules and plugins that can be easily integrated into your 
+                application.</li>
         </ul>
         <h2>How to install Express</h2>
-        <p>To install Express, you need to have Node.js and npm (Node Package Manager) installed on your computer.</p>
-        <p>Then open a command prompt or terminal and navigate to the directory you want to install. Assuming you have already set up a Node.js project next step is to create a package.json file and install express.</p>
+        <p>To install Express, you need to have Node.js and npm (Node Package Manager) installed on your 
+            computer.</p>
+        <p>Then open a command prompt or terminal and navigate to the directory you want to install. 
+            Assuming you have already set up a Node.js project next step is to create a package.json 
+            file and install express.</p>
         <p>To create the package.json file use this command:</p>
         <pre><code>Npm init</code></pre>
         <p>Then install Express with this command:</p>
         <pre><code>Npm i express</code></pre>
-        <p>This command will download and install the latest version of Express and add it to your project's dependencies in the package.json file.</p>
-        <p>Once the installation is complete, you can start using Express in your project by importing it in your code using `require()` or ES6 `import` statement.</p>
+        <p>This command will download and install the latest version of Express and add it to your project's 
+            dependencies in the package.json file.</p>
+        <p>Once the installation is complete, you can start using Express in your project by importing it in 
+            your code using `require()` or ES6 `import` statement.</p>
         <p>Here is an example of a simple Express application:</p>
         <pre><code>
         import express from "express";
@@ -32,17 +46,34 @@
         </code></pre>
         
         <p>The first line of the code imports the Express framework.</p>
-        <p>The second line creates a new instance of an Express application, which will be used to define the routes and middleware for the server.</p>
-        <p>The third block of code defines a GET route for the root URL ("/") of the server. When a user makes a GET request to the root URL, the server responds with the string "Hello, World!".</p>
-        <p>The last block of code starts the server listening on port 3000. When the server starts listening, it logs a message to the console indicating that the server has started.</p>
-        <p>In summary, this code sets up a simple Express server that responds to GET requests to the root URL ("/") with the message "Hello, World!" and logs a message to the console when the server starts listening on port 3000.</p>
+        <p>The second line creates a new instance of an Express application, which will be used to define the 
+            routes and middleware for the server.</p>
+        <p>The third block of code defines a GET route for the root URL ("/") of the server. When a user makes
+             a GET request to the root URL, the server responds with the string "Hello, World!".</p>
+        <p>The last block of code starts the server listening on port 3000. When the server starts listening, 
+            it logs a message to the console indicating that the server has started.</p>
+        <p>In summary, this code sets up a simple Express server that responds to GET requests to the 
+            root URL ("/") with the message "Hello, World!" and logs a message to the console when the 
+            server starts listening on port 3000.</p>
         <h2>The security need for serving static files and how to do it in Express</h2>
-        <p>Serving static files in a web application is important for security reasons as it helps to prevent unauthorized access to sensitive files and directories on the server. If static filesnot properly protected, an attacker could gain access to sensitive data or configuration files that could be used to compromise the security of the application or the server itself.</p>
+        <p>Serving static files in a web application is important for security reasons as it helps to 
+            prevent unauthorized access to sensitive files and directories on the server. If static files
+            not properly protected, an attacker could gain access to sensitive data or configuration files that 
+            could be used to compromise the security of the application or the server itself.</p>
 
-        <p>To serve static files in an Express application, you can use the built-in middleware function <code>express.static()</code>. This function takes one argument, which is the directory where the static files are stored.</p>
+        <p>To serve static files in an Express application, you can use the built-in middleware f
+            unction <code>express.static()</code>. This function takes one argument, which is the directory 
+            where the static files are stored.</p>
         <p>For example, the following code serves all static files in the public directory of the application:</p>
         <pre><code>app.use(express.static('public'));</code></pre>
-        <p>This code tells Express to serve all static files in the public directory, including HTML, CSS, JavaScript, images, and other files. The files are served directly by Express, without the need for a dedicated server like Apache or Nginx.</p>
-        <p>It is important to note that serving static files with <code>express.static()</code> can be a security risk if the directory being served contains sensitive files or directories. To mitigate this risk, it is recommended to store sensitive files outside of the public directory or use authentication and authorization middleware to restrict access to specific files or directories.</p></div>
+        <p>This code tells Express to serve all static files in the public directory, including HTML, CSS, JavaScript, 
+            images, and other files. The files are served directly by Express, without the need for a dedicated server 
+            like Apache or Nginx.</p>
+        <p>It is important to note that serving static files with <code>express.static()</code> can be a security risk 
+            if the directory being served contains sensitive files or directories. To mitigate this risk, it is 
+            recommended to store sensitive files outside of the public directory or use authentication and authorization 
+            middleware to restrict access to specific files or directories.</p>
+        
+        </div>
         
   
