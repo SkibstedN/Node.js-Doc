@@ -6,8 +6,8 @@
             This site is an assignment for the Node.js elective in the 
             Copenhagen School of Technology and Design (KEA), spring 2023, 
             Computer Science programme.<br><br>
-            The task of the assignment is to create a website served with Express
-            and the tools and techniques we have learned to use from the lectures and teachings so far.<br><br>
+            The task of the assignment is to create a website that contains documentation
+            for the tools and techniques we have learned to use from the lectures and teachings so far.<br><br>
             </p>
 
         </div>
@@ -18,9 +18,16 @@
                 
                 <label for="texField">Enter your contribution:</label>
                 <textarea id="textField" name="textField" rows="10" cols="100"></textarea>
-            
+                <br>
+                <button onclick="submitText()">Submit</button>
             </p>
-            
+          
+        <script>
+        function submitText() {
+            var textField = document.getElementById("textField");
+            textField.value = "";
+          }
+          </script>    
 
         </div>
     
