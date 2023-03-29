@@ -2,7 +2,7 @@ import fs from "fs";
 
 function renderPage(page, config={}) {
     const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString()
-                    .replace("$TAB_TITLE", config.tabTitle || "Upper")
+                    .replace("$TAB_TITLE", config.tabTitle || "NodeJs Docs")
                     .replace("$CSS_LINK", config.cssLink || "");
     const footer = fs.readFileSync("./public/components/footer/footer.html").toString()
                     .replace("$FOOTER_YEAR", `©  ${new Date().getFullYear()} Nikolaj Skibsted`);

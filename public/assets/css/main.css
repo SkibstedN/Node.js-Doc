@@ -26,6 +26,10 @@ main {
     flex: 1;
 }
 
+code {
+    font-weight: bold;
+}
+
 .textbox {
     margin: 1em;
     padding-top: 0.1em;
