@@ -29,11 +29,6 @@ const npmPage = templateEngine.renderPage(npm, {
     tabTitle: "NPM"
 });
 
-const about = templateEngine.readPage("./public/pages/about/about.html");
-const aboutPage = templateEngine.renderPage(about, {
-    tabTitle:  "About"
-});
-
 const apitext = templateEngine.readPage("./public/pages/apitext/apitext.html");
 const apiptextPage = templateEngine.renderPage(apitext, {
     tabTitle: "API info"
@@ -82,10 +77,6 @@ app.get("/jstopics", (req, res) => {
 
 app.get("/npm", (req, res) => {
     res.send(npmPage);
-});
-
-app.get("/about", (req, res) => {
-    res.send(aboutPage);
 });
 
 app.get("/apitext", (req, res) => {

@@ -1,246 +1,253 @@
 <div class="textbox">
         <h1>JS Topics.</h1>
-        <h2>ECMAscript and ES6.</h2>
-        <p>ECMAScript (or ES) is a scripting language specification standardized by the Ecma International organization.
-                It was first introduced in 1997 and has been updated several times since then, with the latest version
-                being ES2022.</p>
-        <p>ECMAScript provides the core features and functionality for many popular programming languages such as
-                JavaScript, JScript, and ActionScript. It defines the syntax, data types, control structures, and
-                objects for these languages, which are used to create dynamic web applications, web pages, and mobile
-                apps.</p>
-        <p>The ECMAScript specification defines a set of rules that a language must follow to be considered a conforming
-                implementation of the standard. These rules are designed to ensure that ECMAScript is consistent and
-                compatible across different platforms and environments.</p>
-        <p>Some of the key features of ECMAScript include variables, functions, arrays, objects, loops, conditional
-                statements, and error handling. It also includes more advanced features such as classes, modules, arrow
-                functions, generators, and promises.</p>
-        <p>JavaScript, which is the most popular client-side scripting language used in web development, is based on the
-                ECMAScript specification. Therefore, developers who work with JavaScript are essentially working with
-                ECMAScript, and are often referred to as ECMAScript developers.</p>
-        <h2>ES6.</h2>
-        <p>ES6, also known as ECMAScript 2015, is a major update to the ECMAScript language specification that was
-                released in June 2015. It introduced significant new features and improvements to the language,
-                including:</p>
-        <ul>
-                <li>Arrow functions</li>
-                <li>Classes</li>
-                <li>Modules</li>
-                <li>Promises</li>
-                <li>Template literals</li>
-                <li>Destructuring</li>
-                <li>Default function parameters</li>
-                <li>Rest and spread operators</li>
-        </ul>
-        <p>ES6 was a major update that brought many improvements to JavaScript and made it a more powerful and flexible
-                language. It has been widely adopted by web developers and is supported by all modern browsers. Many
-                developers now use ES6 as the baseline for their JavaScript projects and rely on transpilers like Babel
-                to ensure compatibility with older browsers.</p>
-        <h2>Primitive datatypes:</h2>
-        <p>Primitive datatypes are not objects and do not have methods. They include:</p>
-        <ul>
-                <li>Number</li>
-                <li>String</li>
-                <li>Boolean</li>
-                <li>Null</li>
-                <li>Undefined</li>
-                <li>Symbol</li>
-        </ul>
-        <h2>Complex datatypes:</h2>
-        <p>These are objects that can hold multiple values and have methods. They include:</p>
-        <ul>
-                <li>Object</li>
-                <li>Array</li>
-                <li>Function</li>
-                <li>Date</li>
-                <li>RegEx</li>
-        </ul>
-        <p>In addition to these are two special values: NaN (not a number) and Infinity.</p>
-        <h1>Scoping: var, let, const – types of variables.</h1>
-        <p><code>var</code> is still supported but <code>let</code> and <code>const</code> are recommended.</p>
-        <p><code>const</code> must be initialized at the time of declaration and cannot be reassigned once initialized.
-        </p>
-        <p><code>let</code> is accessible only within the block it is declared, including nested blocks - it can be
-                reassigned but cannot be redecorated within the same scope.</p>
-        
-        <h1>Strings:</h1>
-        <p><code>number()</code> converts a string, boolean, or object value to a number.</p>
-        <pre>
-                <code>const myString = "123";
-                const myNumber = Number(myString);</code>
-        </pre>
-        <p>In this example, the <code>Number()</code> method is used to convert the string "123" to a number. The
-                resulting number is assigned to the <code>myNumber</code> variable.</p>
-        <p><code>parseFloat()</code> converts float values in a string to a floating-point number that can be logged.
-        </p>
-        <pre>
-                <code>const myString = "3.14";
-                const myNumber = parseFloat(myString);</code>
-        </pre>
-        <p>In this example, the <code>parseFloat()</code> method is used to convert the string "3.14" to a
-                floating-point number. The resulting number is assigned to the <code>myNumber</code> variable.</p>
-        <p><code>toFixed()</code> - format a number as a string with a specified number of decimal places.</p>
-        <p>The result of the function is always a string, not a number. If you need to perform arithmetic operations on
-                the result, you will need to convert the string back to a number using the <code>Number()</code>
-                function or <code>parseFloat()</code> method.</p>
-        <pre>
-                <code>const myNumber = 3.14159;
-                const formattedNumber = myNumber.toFixed(2);
-        </code>
-        </pre>
-        <p>In this example, the <code>toFixed()</code> method is used to format the number 3.14159 with 2 decimal
-                places. The resulting string "3.14" is assigned to the <code>formattedNumber</code> variable.</p>
-        <p><code>Replace()</code> - search a string for a specified value or a regular expression, and replace the
-                matching values with a new value.</p>
-        <pre>
-                <code>const myString = "Hello, world!";
-                const newString = myString.replace("world", "JavaScript");
-                </code>
-        </pre>
-        <p>In this example, the <code>replace()</code> method is used to replace the substring "world" in the string
-                "Hello, world!" with "JavaScript". The resulting string "Hello, JavaScript!" is assigned to the
-                <code>newString</code> variable.
-        </p>
-        <h1>Arrays:</h1>
-        <p><code>push()</code> adds elements to the end of an array.</p>
-        <pre>
-                <code>const myArray = [1, 2, 3];
-                myArray.push(4);</code>
-        </pre>
-        <p>In this example, the <code>push()</code> method is used to add the element 4 to the end of the
-                <code>myArray</code> array. The resulting array <code>[1, 2, 3, 4]</code> is assigned back to
-                <code>myArray</code>.
-        </p>
-        <p><code>indexOf()</code> searches an array for an element and returns its index position. If the element is not
-                found in the array, the method returns -1.</p>
-        <pre>
-                <code>const myArray = ["apple", "banana", "orange"];
-                const index = myArray.indexOf("banana");</code>
-        </pre>
-        <p>In this example, the <code>indexOf()</code> method is used to find the index of the "banana" element in the
-                <code>myArray</code> array. The resulting index <code>1</code> is assigned to the <code>index</code>
-                variable.
-        </p>
-        <p><code>splice()</code> adds and/or removes elements from an array.</p>
-        <pre>
-                <code>const myArray = [1, 2, 3, 4];
-                myArray.splice(1, 2, "a", "b");</code>
-        </pre>
-        <p>In this example, the <code>splice()</code> method is used to remove two elements starting from the index 1 in
-                the <code>myArray</code> array, and then add two new elements "a" and "b" at the same position. The
-                resulting array <code>[1, "a", "b", 4]</code> is assigned back to <code>myArray</code>.</p>
-        <p><code>slice()</code> copies an array or elements of an array into a new array.</p>
-        <pre>
-                <code>const myArray = [1, 2, 3, 4];
-                const newArray = myArray.slice(1, 3);</code>
-        </pre>
-        <p>In this example, the <code>slice()</code> method is used to extract elements starting from index 1 up to, but
-                not including, index 3 in the <code>myArray</code> array. The resulting array <code>[2, 3]</code> is
-                assigned to the <code>newArray</code> variable. Note that the original array <code>myArray</code>
-                remains unchanged.</p>
-        <p><code>pop()</code> removes the last element from an array and returns that element.</p>
-        <pre>
-                <code>const myArray = [1, 2, 3, 4];
-                const lastElement = myArray.pop();</code>
-        </pre>
-        <p>In this example, the <code>pop()</code> method is used to remove the last element (<code>4</code>) from the
-                <code>myArray</code> array and return it. The resulting array <code>[1, 2, 3]</code> is assigned back to
-                <code>myArray</code>, and the returned element <code>4</code> is assigned to the
-                <code>lastElement</code>variable
-        </p>
 
-        <h1>Callback functions:</h1>
-        <p>Callbacks are used to handle the results of asynchronous operations in a non-blocking manner. The callback
+        <h3>ECMAscript and ES6.</h3>
+                <p>ECMAScript (or ES) is a scripting language specification standardized by the Ecma International organization.
+                        It was first introduced in 1997 and has been updated several times since then, with the latest version
+                        being ES2022.</p>
+                <p>ECMAScript provides the core features and functionality for many popular programming languages such as
+                        JavaScript, JScript, and ActionScript. It defines the syntax, data types, control structures, and
+                        objects for these languages, which are used to create dynamic web applications, web pages, and mobile
+                        apps.</p>
+                <p>The ECMAScript specification defines a set of rules that a language must follow to be considered a conforming
+                        implementation of the standard. These rules are designed to ensure that ECMAScript is consistent and
+                        compatible across different platforms and environments.</p>
+                <p>Some of the key features of ECMAScript include variables, functions, arrays, objects, loops, conditional
+                        statements, and error handling. It also includes more advanced features such as classes, modules, arrow
+                        functions, generators, and promises.</p>
+                <p>JavaScript, which is the most popular client-side scripting language used in web development, is based on the
+                        ECMAScript specification. Therefore, developers who work with JavaScript are essentially working with
+                        ECMAScript, and are often referred to as ECMAScript developers.</p>
+
+        <h3>ES6.</h3>
+                <p>ES6, also known as ECMAScript 2015, is a major update to the ECMAScript language specification that was
+                        released in June 2015. It introduced significant new features and improvements to the language,
+                        including:</p>
+                        <ul>
+                                <li>Arrow functions</li>
+                                <li>Classes</li>
+                                <li>Modules</li>
+                                <li>Promises</li>
+                                <li>Template literals</li>
+                                <li>Destructuring</li>
+                                <li>Default function parameters</li>
+                                <li>Rest and spread operators</li>
+                        </ul>
+                <p>ES6 was a major update that brought many improvements to JavaScript and made it a more powerful and flexible
+                        language. It has been widely adopted by web developers and is supported by all modern browsers. Many
+                        developers now use ES6 as the baseline for their JavaScript projects and rely on transpilers like Babel
+                        to ensure compatibility with older browsers.</p>
+
+        <h3>Primitive datatypes.</h3>
+                <p>Primitive datatypes are not objects and do not have methods. They include:</p>
+                        <ul>
+                                <li>Number</li>
+                                <li>String</li>
+                                <li>Boolean</li>
+                                <li>Null</li>
+                                <li>Undefined</li>
+                                <li>Symbol</li>
+                        </ul>
+
+        <h3>Complex datatypes.</h3>
+                <p>These are objects that can hold multiple values and have methods. They include:</p>
+                        <ul>
+                                <li>Object</li>
+                                <li>Array</li>
+                                <li>Function</li>
+                                <li>Date</li>
+                                <li>RegEx</li>
+                        </ul>
+                <p>In addition to these are two special values: NaN (not a number) and Infinity.</p>
+
+        <h3>Scoping: var, let, const – types of variables.</h3>
+                <p><code>var</code> is still supported but <code>let</code> and <code>const</code> are recommended.</p>
+                <p><code>const</code> must be initialized at the time of declaration and cannot be reassigned once initialized.
+                </p>
+                <p><code>let</code> is accessible only within the block it is declared, including nested blocks - it can be
+                        reassigned but cannot be redecorated within the same scope.</p>
+        
+        <h3>Strings.</h3>
+                <p><code>number()</code> converts a string, boolean, or object value to a number.</p>
+                <pre>
+                        <code>const myString = "123";
+                        const myNumber = Number(myString);</code>
+                </pre>
+                <p>In this example, the <code>Number()</code> method is used to convert the string "123" to a number. The
+                        resulting number is assigned to the <code>myNumber</code> variable.</p>
+                <p><code>parseFloat()</code> converts float values in a string to a floating-point number that can be logged.
+                </p>
+                <pre>
+                        <code>const myString = "3.14";
+                        const myNumber = parseFloat(myString);</code>
+                </pre>
+                <p>In this example, the <code>parseFloat()</code> method is used to convert the string "3.14" to a
+                        floating-point number. The resulting number is assigned to the <code>myNumber</code> variable.</p>
+                <p><code>toFixed()</code> - format a number as a string with a specified number of decimal places.</p>
+                <p>The result of the function is always a string, not a number. If you need to perform arithmetic operations on
+                        the result, you will need to convert the string back to a number using the <code>Number()</code>
+                        function or <code>parseFloat()</code> method.</p>
+                <pre>
+                        <code>const myNumber = 3.14159;
+                        const formattedNumber = myNumber.toFixed(2);
+                </code>
+                </pre>
+                <p>In this example, the <code>toFixed()</code> method is used to format the number 3.14159 with 2 decimal
+                        places. The resulting string "3.14" is assigned to the <code>formattedNumber</code> variable.</p>
+                <p><code>Replace()</code> - search a string for a specified value or a regular expression, and replace the
+                        matching values with a new value.</p>
+                <pre>
+                        <code>const myString = "Hello, world!";
+                        const newString = myString.replace("world", "JavaScript");
+                        </code>
+                </pre>
+                <p>In this example, the <code>replace()</code> method is used to replace the substring "world" in the string
+                        "Hello, world!" with "JavaScript". The resulting string "Hello, JavaScript!" is assigned to the
+                        <code>newString</code> variable.
+                </p>
+
+        <h3>Arrays.</h3>
+                <p><code>push()</code> adds elements to the end of an array.</p>
+                <pre>
+                        <code>const myArray = [1, 2, 3];
+                        myArray.push(4);</code>
+                </pre>
+                <p>In this example, the <code>push()</code> method is used to add the element 4 to the end of the
+                        <code>myArray</code> array. The resulting array <code>[1, 2, 3, 4]</code> is assigned back to
+                        <code>myArray</code>.
+                </p>
+                <p><code>indexOf()</code> searches an array for an element and returns its index position. If the element is not
+                        found in the array, the method returns -1.</p>
+                <pre>
+                        <code>const myArray = ["apple", "banana", "orange"];
+                        const index = myArray.indexOf("banana");</code>
+                </pre>
+                <p>In this example, the <code>indexOf()</code> method is used to find the index of the "banana" element in the
+                        <code>myArray</code> array. The resulting index <code>1</code> is assigned to the <code>index</code>
+                        variable.
+                </p>
+                <p><code>splice()</code> adds and/or removes elements from an array.</p>
+                <pre>
+                        <code>const myArray = [1, 2, 3, 4];
+                        myArray.splice(1, 2, "a", "b");</code>
+                </pre>
+                <p>In this example, the <code>splice()</code> method is used to remove two elements starting from the index 1 in
+                        the <code>myArray</code> array, and then add two new elements "a" and "b" at the same position. The
+                        resulting array <code>[1, "a", "b", 4]</code> is assigned back to <code>myArray</code>.</p>
+                <p><code>slice()</code> copies an array or elements of an array into a new array.</p>
+                <pre>
+                        <code>const myArray = [1, 2, 3, 4];
+                        const newArray = myArray.slice(1, 3);</code>
+                </pre>
+                <p>In this example, the <code>slice()</code> method is used to extract elements starting from index 1 up to, but
+                        not including, index 3 in the <code>myArray</code> array. The resulting array <code>[2, 3]</code> is
+                        assigned to the <code>newArray</code> variable. Note that the original array <code>myArray</code>
+                        remains unchanged.</p>
+                <p><code>pop()</code> removes the last element from an array and returns that element.</p>
+                <pre>
+                        <code>const myArray = [1, 2, 3, 4];
+                        const lastElement = myArray.pop();</code>
+                </pre>
+                <p>In this example, the <code>pop()</code> method is used to remove the last element (<code>4</code>) from the
+                        <code>myArray</code> array and return it. The resulting array <code>[1, 2, 3]</code> is assigned back to
+                        <code>myArray</code>, and the returned element <code>4</code> is assigned to the
+                        <code>lastElement</code>variable
+                </p>
+
+        <h3>Callback functions.</h3>
+                <p>Callbacks are used to handle the results of asynchronous operations in a non-blocking manner. The callback
                 function is passed as an argument to another function and is called by that function at some point
                 during its execution.</p>
-        <h1>Date() object.</h1>
-        <p>In JavaScript, the Date object is a built-in object that represents a single moment in time. It can be used
-                to work with dates and times in various ways, such as creating, formatting, and manipulating dates.</p>
-        <p>When you create a Date object using the <code>new Date()</code> constructor, it will be initialized with the
-                current date and time. You can also create a Date object for a specific date and time by passing
-                arguments to the constructor.</p>
-        <p>Here are some common methods and properties of the Date object:</p>
-        <ul>
-                <li><code>getFullYear()</code> - returns the year of the date as a four-digit number</li>
-                <li><code>getMonth()</code> - returns the month of the date as a zero-based number (0 = January, 1 =
-                        February, etc.)</li>
-                <li><code>getDate()</code> - returns the day of the month of the date as a number (1-31)</li>
-                <li><code>getDay()</code> - returns the day of the week of the date as a zero-based number (0 = Sunday,
-                        1 = Monday, etc.)</li>
-                <li><code>getHours()</code> - returns the hour of the date as a number (0-23)</li>
-                <li><code>getMinutes()</code> - returns the minute of the date as a number (0-59)</li>
-                <li><code>getSeconds()</code> - returns the second of the date as a number (0-59)</li>
-                <li><code>getTime()</code> - returns the number of milliseconds since January 1, 1970, 00:00:00 UTC
-                        (also known as Unix timestamp)</li>
-                <li><code>setFullYear()</code> - sets the year of the date</li>
-                <li><code>setMonth()</code> - sets the month of the date (zero-based)</li>
-                <li><code>setDate()</code> - sets the day of the month of the date</li>
-                <li><code>setHours()</code> - sets the hour of the date</li>
-                <li><code>setMinutes()</code> - sets the minute of the date</li>
-                <li><code>setSeconds()</code> - sets the second of the date</li>
-                <li><code>toString()</code> - returns a string representing the date and time</li>
-        </ul>
-        <p>There are many other methods and properties available on the Date object, and it is a powerful tool for
-                working with dates and times in JavaScript.</p>
-        <p>Here's an example of creating a new Date object and getting the current date and time:</p>
-        <pre>
-                <code>const currentDate = new Date().toLocaleString();
-                </code></pre>
-        <p>The output of the above code will be a string representing the current date and time in the local format, for
-                example:</p>
-        <p>"3/15/2023, 2:46:15 PM"</p>
-        <p>The exact format of the string may vary depending on the user's locale and browser settings.</p>
 
-        <h1>Loop methods.</h1>
-        <p><code>map()</code> Applies a provided function to each element of the array and returns a new array with the
-                results of those function applications.</p>
-        <pre>
-                <code>const myArray = [1, 2, 3];
-                const newArray = myArray.map(x => x * 2);
-                </code></pre>
-        <p>In this example, the <code>map()</code> method is used to transform each element of the <code>myArray</code>
-                array by multiplying it by 2. The resulting array <code>[2, 4, 6]</code> is assigned to the
-                <code>newArray</code> variable. Note that the original array <code>myArray</code> remains unchanged.</p>
-        <p><code>filter()</code> Create a new array with all the elements of the original array that pass a certain
-                test. It does not modify the original array, but creates a new array with the elements that meet the
-                specified conditions.</p>
-        <pre>
-                <code>const myArray = [1, 2, 3, 4, 5];
-                const newArray = myArray.filter(x => x % 2 === 0);
-                </code></pre>
-        <p>In this example, the <code>filter()</code> method is used to create a new array <code>newArray</code> with
-                only the even elements of the <code>myArray</code> array. The resulting array <code>[2, 4]</code> is
-                assigned to the <code>newArray</code> variable. Note that the original array <code>myArray</code>
-                remains unchanged.</p>
-        <p><code>reduce()</code> Iterate over an array and accumulate a single result based on the elements in the
-                array. The <code>reduce()</code> method returns a single value: the function's accumulated result.</p>
-        <pre>
-                <code>const myArray = [1, 2, 3, 4];
-                const sum = myArray.reduce((accumulated, current) => accumulated + current, 0);
-                </code></pre>
-        <p>In this example, the <code>reduce()</code> method is used to compute the sum of the elements in the
-                <code>myArray</code> array by starting with an initial value of 0 for the accumulator
-                <code>accumulated</code> and adding each element <code>current</code> to it. The resulting sum
-                <code>10</code> is assigned to the <code>sum</code> variable. The original array <code>myArray</code>
-                remains unchanged.</p>
+        <h3>Date() object.</h3>
+                <p>In JavaScript, the Date object is a built-in object that represents a single moment in time. It can be used
+                        to work with dates and times in various ways, such as creating, formatting, and manipulating dates.</p>
+                <p>When you create a Date object using the <code>new Date()</code> constructor, it will be initialized with the
+                        current date and time. You can also create a Date object for a specific date and time by passing
+                        arguments to the constructor.</p>
+                <p>Here are some common methods and properties of the Date object:</p>
+                <ul>
+                        <li><code>getFullYear()</code> - returns the year of the date as a four-digit number</li>
+                        <li><code>getMonth()</code> - returns the month of the date as a zero-based number (0 = January, 1 =
+                                February, etc.)</li>
+                        <li><code>getDate()</code> - returns the day of the month of the date as a number (1-31)</li>
+                        <li><code>getDay()</code> - returns the day of the week of the date as a zero-based number (0 = Sunday,
+                                1 = Monday, etc.)</li>
+                        <li><code>getHours()</code> - returns the hour of the date as a number (0-23)</li>
+                        <li><code>getMinutes()</code> - returns the minute of the date as a number (0-59)</li>
+                        <li><code>getSeconds()</code> - returns the second of the date as a number (0-59)</li>
+                        <li><code>getTime()</code> - returns the number of milliseconds since January 1, 1970, 00:00:00 UTC
+                                (also known as Unix timestamp)</li>
+                        <li><code>setFullYear()</code> - sets the year of the date</li>
+                        <li><code>setMonth()</code> - sets the month of the date (zero-based)</li>
+                        <li><code>setDate()</code> - sets the day of the month of the date</li>
+                        <li><code>setHours()</code> - sets the hour of the date</li>
+                        <li><code>setMinutes()</code> - sets the minute of the date</li>
+                        <li><code>setSeconds()</code> - sets the second of the date</li>
+                        <li><code>toString()</code> - returns a string representing the date and time</li>
+                </ul>
+                <p>There are many other methods and properties available on the Date object, and it is a powerful tool for
+                        working with dates and times in JavaScript.</p>
+                <p>Here's an example of creating a new Date object and getting the current date and time:</p>
+                <pre>
+                        <code>const currentDate = new Date().toLocaleString();
+                        </code></pre>
+                <p>The output of the above code will be a string representing the current date and time in the local format, for
+                        example:</p>
+                <p>"3/15/2023, 2:46:15 PM"</p>
+                <p>The exact format of the string may vary depending on the user's locale and browser settings.</p>
 
-        <h1>Why a functional approach to loops is to be preferred and how to implement it without side effects. </h1>
-        <p>A functional approach to loops is often preferred because it allows for more readable and maintainable code,
-                with a focus on data transformations rather than the details of how to iterate over that data. In a
-                functional approach, loops are implemented using higher-order functions such as <code>map()</code>,
-                <code>filter()</code>, and <code>reduce()</code> that take a callback function as an argument to perform
-                operations on the data.</p>
-        
-        <p>This approach avoids side effects by making it clear what the input and output of each operation is, and by
-                not modifying the original data. Side effects can make code harder to understand and debug, especially
-                as the codebase grows larger.</p>
+        <h3>Loop methods.</h3>
+                <p><code>map()</code> Applies a provided function to each element of the array and returns a new array with the
+                        results of those function applications.</p>
+                <pre>
+                        <code>const myArray = [1, 2, 3];
+                        const newArray = myArray.map(x => x * 2);
+                        </code></pre>
+                <p>In this example, the <code>map()</code> method is used to transform each element of the <code>myArray</code>
+                        array by multiplying it by 2. The resulting array <code>[2, 4, 6]</code> is assigned to the
+                        <code>newArray</code> variable. Note that the original array <code>myArray</code> remains unchanged.</p>
+                <p><code>filter()</code> Create a new array with all the elements of the original array that pass a certain
+                        test. It does not modify the original array, but creates a new array with the elements that meet the
+                        specified conditions.</p>
+                <pre>
+                        <code>const myArray = [1, 2, 3, 4, 5];
+                        const newArray = myArray.filter(x => x % 2 === 0);
+                        </code></pre>
+                <p>In this example, the <code>filter()</code> method is used to create a new array <code>newArray</code> with
+                        only the even elements of the <code>myArray</code> array. The resulting array <code>[2, 4]</code> is
+                        assigned to the <code>newArray</code> variable. Note that the original array <code>myArray</code>
+                        remains unchanged.</p>
+                <p><code>reduce()</code> Iterate over an array and accumulate a single result based on the elements in the
+                        array. The <code>reduce()</code> method returns a single value: the function's accumulated result.</p>
+                <pre>
+                        <code>const myArray = [1, 2, 3, 4];
+                        const sum = myArray.reduce((accumulated, current) => accumulated + current, 0);
+                        </code></pre>
+                <p>In this example, the <code>reduce()</code> method is used to compute the sum of the elements in the
+                        <code>myArray</code> array by starting with an initial value of 0 for the accumulator
+                        <code>accumulated</code> and adding each element <code>current</code> to it. The resulting sum
+                        <code>10</code> is assigned to the <code>sum</code> variable. The original array <code>myArray</code>
+                        remains unchanged.</p>
 
-        <p>To implement a functional approach without side effects, it's important to always create new arrays or
-                objects rather than modifying the original data. For example, instead of modifying an existing array
-                using <code>push()</code> or <code>splice()</code>, use functions like <code>concat()</code> and
-                <code>slice()</code> to create new arrays with the desired modifications.</p>
-        
-        <p>It's also important to make sure that the callback functions used in higher-order functions do not modify any
-                external state, but instead rely solely on their input arguments to produce their output. This can be
-                achieved by using pure functions that have no side effects and always return the same output for a given
-                input.</p>
+        <h3>Why a functional approach to loops is to be preferred and how to implement it without side effects. </h3>
+                <p>A functional approach to loops is often preferred because it allows for more readable and maintainable code,
+                        with a focus on data transformations rather than the details of how to iterate over that data. In a
+                        functional approach, loops are implemented using higher-order functions such as <code>map()</code>,
+                        <code>filter()</code>, and <code>reduce()</code> that take a callback function as an argument to perform
+                        operations on the data.</p>
+                
+                <p>This approach avoids side effects by making it clear what the input and output of each operation is, and by
+                        not modifying the original data. Side effects can make code harder to understand and debug, especially
+                        as the codebase grows larger.</p>
+
+                <p>To implement a functional approach without side effects, it's important to always create new arrays or
+                        objects rather than modifying the original data. For example, instead of modifying an existing array
+                        using <code>push()</code> or <code>splice()</code>, use functions like <code>concat()</code> and
+                        <code>slice()</code> to create new arrays with the desired modifications.</p>
+                
+                <p>It's also important to make sure that the callback functions used in higher-order functions do not modify any
+                        external state, but instead rely solely on their input arguments to produce their output. This can be
+                        achieved by using pure functions that have no side effects and always return the same output for a given
+                        input.</p>
 </div>
