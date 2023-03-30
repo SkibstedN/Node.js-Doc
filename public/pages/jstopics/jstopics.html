@@ -196,6 +196,52 @@
                 <p>"3/15/2023, 2:46:15 PM"</p>
                 <p>The exact format of the string may vary depending on the user's locale and browser settings.</p>
 
+        <h3>setTimeout()</h3>        
+                <p><code>setTimeout()</code> is a JavaScript function that allows you to schedule the execution of a function after a 
+                        specified amount of time. When you call <code>setTimeout()</code>, you provide it with a function to execute 
+                        and a delay time (in milliseconds) before the function should execute. The function is only executed once, 
+                        after the specified delay time has elapsed. You can also pass optional arguments to the function.</p>
+
+                <p>Here is an example usage of <code>setTimeout()</code>:</p>
+                        <pre>
+                                <code>setTimeout(function() {
+                                        console.log('This function was executed after a 3-second delay.');
+                                        }, 3000);</code></pre>
+                
+                <p>If you need to cancel the execution of the function, you can use the <code>clearTimeout()</code> function, 
+                        passing in the timer ID returned by <code>setTimeout()</code>. This can be useful if you change your mind about 
+                        executing the function, or if you want to prevent the function from being executed multiple times.</p>
+                <p>Overall, <code>setTimeout()</code> is a useful function for scheduling a function to be executed after a delay, 
+                        allowing you to control the timing of certain events in your JavaScript code.</p>      
+
+        <h3>Client-side and Server-side Redirection in JavaScript</h3>
+                <p>Redirection refers to the process of forwarding a user from one web page to another web page. There are two 
+                        types of redirection: client-side and server-side.</p>
+        <h4>Client-side redirection:</h4>
+                <p>Client-side redirection can be achieved using the window.location object in JavaScript. For example, 
+                        to redirect the user to a new page, you can set the window.location.href property to the URL of the new page:</p>
+                <pre>
+                        <code>window.location.href = "http://example.com";</code></pre>
+
+                <p>You can also use window.location.replace() method to redirect to a new page:</p>
+                <pre>
+                        <code>window.location.replace("http://example.com");</code></pre>
+
+        <h4>Server-side redirection:</h4>
+                <p>Server-side redirection can be achieved using server-side JavaScript frameworks like Node.js. For example, 
+                        using the Express.js framework, you can use the res.redirect() method to redirect the user to a new page:</p>
+                        <pre>
+                        <code>app.get('/redirect', function(req, res){
+                        res.redirect('http://example.com');
+                                });</code></pre>
+                <p>You can also use the res.writeHead() method to send a response header with a new location to redirect to:</p>
+                        <pre>
+                        <code>res.writeHead(302, {
+                           'Location': 'http://example.com'
+                        });
+                        res.end();</code></pre>       
+                <p>In both cases, the server sends a response to the client with a new location to redirect to.</p>        
+
         <h3>Loop methods.</h3>
                 <p><code>map()</code> Applies a provided function to each element of the array and returns a new array with the
                         results of those function applications.</p>
