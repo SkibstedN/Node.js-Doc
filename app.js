@@ -7,7 +7,7 @@ app.use(express.static("public"));
 
 import templateEngine from "./util/templateEngine.js";
 
-
+// say it aint so *irrelevant comment*
 
 const frontpage = templateEngine.readPage("./public/pages/frontpage/frontpage.html");
 const frontpagePage = templateEngine.renderPage(frontpage, {
